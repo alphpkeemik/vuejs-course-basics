@@ -8,6 +8,16 @@
      <button @click="onSubmit">
         Submit
      </button>
+     <div>
+       <label>
+         <input
+           :checked="submitAnonymously"
+           @change="toggleSubmitAnonymously"
+           type="checkbox"
+         />
+         Submit anonymously
+       </label>
+     </div>
    </div>
     <div>
       {{ message }}
@@ -22,13 +32,15 @@ export default {
   data () {
     return {
       message: 'I live on the component instance',
-      foo: 5,
-      bar: 3
+      submitAnonymously: false
     }
   },
   methods: {
     onInput (event) {
       this.message = event.target.value
+    },
+    toggleSubmitAnonymously (event) {
+      this.submitAnonymously = !this.submitAnonymously
     },
     onSubmit () {
       console.log(this.message)
