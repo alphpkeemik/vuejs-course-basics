@@ -1,14 +1,19 @@
 <template>
   <div id="app">
     hi
-    {{ 3+3 }}
+    {{ message }}
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      message: 'I live on the component instance'
+    }
+  }
 }
 </script>
 
