@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    hi
-    {{ `${message} adding : ${ foo + bar}` }}
+   <div>
+     <input v-bind:value="message" />
+   </div>
+    <div>
+      {{ message }}
+    </div>
   </div>
 </template>
 
