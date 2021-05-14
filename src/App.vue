@@ -1,7 +1,10 @@
 <template>
   <div id="app">
    <div>
-     <input v-bind:value="message" />
+     <input
+       v-bind:value="message"
+       v-on:input="event => message = event.target.value"
+     />
    </div>
     <div>
       {{ message }}
