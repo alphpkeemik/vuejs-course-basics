@@ -3,7 +3,7 @@
    <div>
      <input
        v-bind:value="message"
-       v-on:input="event => message = event.target.value"
+       v-on:input="onInput"
      />
    </div>
     <div>
@@ -21,6 +21,11 @@ export default {
       message: 'I live on the component instance',
       foo: 5,
       bar: 3
+    }
+  },
+  methods: {
+    onInput (event) {
+      this.message = event.target.value
     }
   }
 }
