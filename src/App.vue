@@ -2,8 +2,8 @@
   <div id="app">
    <div>
      <input
-       v-bind:value="message"
-       v-on:input="onInput"
+       :value="message"
+       @input="onInput"
      />
    </div>
     <div>
