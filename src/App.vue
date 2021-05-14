@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     hi
+    {{ 3+3 }}
   </div>
 </template>
 
