@@ -21,12 +21,14 @@
    </div>
     <div>
       {{ message }}
-      <div v-show="submitAnonymously" class="submitAnonymouslyTrue">
-        You are going to submit anonymously, just reminding you.
-      </div>
-      <div v-show="!submitAnonymously" class="submitAnonymouslyFalse">
-        You are going to submit by your name.
-      </div>
+      <template v-if="submitAnonymously">
+        <div  class="submitAnonymouslyTrue">
+          You are going to submit anonymously, just reminding you.
+        </div>
+        <div class="submitAnonymouslyFalse">
+          You are going to submit by your name.
+        </div>
+      </template>
     </div>
   </div>
 </template>
