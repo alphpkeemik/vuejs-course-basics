@@ -6,9 +6,7 @@
        @input="onInput"
      />
      <!-- UpperCase helps to distinguish between html extensions and Vue.js component -->
-     <BeautifulButton @click="onSubmit">
-        Submit
-     </BeautifulButton>
+     <BeautifulButton @click="onSubmit" value="Submit" />
      <div>
        <label>
          <input

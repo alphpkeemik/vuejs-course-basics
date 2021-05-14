@@ -1,12 +1,13 @@
 <template>
   <button @click="$emit('click')">
-    Placeholder!
+    {{ value }}
   </button>
 </template>
 
 <script>
 export default {
-  name: 'BeautifulButton'
+  name: 'BeautifulButton',
+  props: ['value']
 }
 </script>
 
