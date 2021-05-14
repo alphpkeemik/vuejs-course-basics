@@ -21,6 +21,9 @@
    </div>
     <div>
       {{ message }}
+      <div v-if="submitAnonymously">
+        You are going to submit anonymously, just reminding you.
+      </div>
     </div>
   </div>
 </template>
