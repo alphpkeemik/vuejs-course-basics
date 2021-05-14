@@ -5,9 +5,10 @@
        :value="message"
        @input="onInput"
      />
-     <button @click="onSubmit">
+     <!-- UpperCase helps to distinguish between html extensions and Vue.js component -->
+     <BeautifulButton @click="onSubmit">
         Submit
-     </button>
+     </BeautifulButton>
      <div>
        <label>
          <input
@@ -34,9 +35,12 @@
 </template>
 
 <script>
-
+import BeautifulButton from './components/BeautifulButton'
 export default {
   name: 'App',
+  components: {
+    BeautifulButton
+  },
   data () {
     return {
       message: 'I live on the component instance',
