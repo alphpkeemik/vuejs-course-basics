@@ -5,6 +5,9 @@
        :value="message"
        @input="onInput"
      />
+     <button @click="onSubmit">
+        Submit
+     </button>
    </div>
     <div>
       {{ message }}
@@ -26,6 +29,9 @@ export default {
   methods: {
     onInput (event) {
       this.message = event.target.value
+    },
+    onSubmit () {
+      console.log(this.message)
     }
   }
 }
