@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     hi
-    {{ message }}
+    {{ `${message} adding : ${ foo + bar}` }}
   </div>
 </template>
 
@@ -11,7 +11,9 @@ export default {
   name: 'App',
   data () {
     return {
-      message: 'I live on the component instance'
+      message: 'I live on the component instance',
+      foo: 5,
+      bar: 3
     }
   }
 }
