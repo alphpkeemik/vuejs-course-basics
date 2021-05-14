@@ -24,6 +24,9 @@
       <div v-if="submitAnonymously">
         You are going to submit anonymously, just reminding you.
       </div>
+      <div v-else>
+        You are going to submit by your name.
+      </div>
     </div>
   </div>
 </template>
